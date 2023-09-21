@@ -1,5 +1,5 @@
 import countSlice from "./features/countSlice";
-
+import playerSlice from "./features/playerSlice";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
   persistStore,
@@ -19,7 +19,8 @@ const persistConfig = {
   whitelist: ["count"],
 };
 const rootReducer = combineReducers({
-    count: countSlice,
+  count: countSlice,
+  player: playerSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
