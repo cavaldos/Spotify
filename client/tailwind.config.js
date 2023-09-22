@@ -9,9 +9,7 @@ export default {
       fontFamily: {
         nunito: ["Nunito", "sans-serif", "ui-sans-serif", "system-ui"],
       },
-      colors: {
-       
-      },
+      colors: {},
       screens: {
         sm: "640px",
         // => @media (min-width: 640px) { ... }
