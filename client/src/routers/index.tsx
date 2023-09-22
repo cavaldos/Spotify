@@ -1,29 +1,30 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
-import Home from "~/pages/home";
+import Home from "~/pages/Home";
+import Profile from "~/pages/Profile";
+import Search from "~/pages/Search";
 import Auth from "~/pages/auth";
-import TestPage from "~/pages/test";
 const AuthLayout = () => {
   return <Outlet />;
 };
 export default createBrowserRouter([
   {
-    element: <AuthLayout />,
-    errorElement: <h1>404</h1>,
+    path: "/",
+
+    element: <Home />,
+  },
+  {
+    path: "/auth",
+
+    element: <Auth />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
     children: [
       {
-        path: "/auth/",
-        element: <Auth />,
-        children: [
-          {
-            path: "/v1",
-            element: <TestPage />,
-          },
-        ],
-      },
-      {
-        path: "/",
-        element: <Home />,
+        path: "/profile/search",
+        element: <Search />,
       },
     ],
   },
