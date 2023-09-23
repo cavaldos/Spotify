@@ -6,10 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "0.0.0.0", // default: 'localhost'
-
   },
   preview: {
     port: 8080,
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "**/*.jsx", "**/*.tsx"],
   },
   resolve: {
     alias: [
@@ -17,7 +19,6 @@ export default defineConfig({
         find: "~/",
         replacement: "/src/",
       },
-     
     ],
   },
 });

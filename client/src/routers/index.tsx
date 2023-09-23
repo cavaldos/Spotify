@@ -4,27 +4,37 @@ import Home from "~/pages/Home";
 import Profile from "~/pages/Profile";
 import Search from "~/pages/Search";
 import Auth from "~/pages/auth";
+import AuthProvider from "~/components/context.jsx";
 const AuthLayout = () => {
-  return <Outlet />;
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
 export default createBrowserRouter([
   {
-    path: "/",
-
-    element: <Home />,
-  },
-  {
-    path: "/auth",
-
-    element: <Auth />,
-  },
-  {
-    path: "/profile",
-    element: <Profile />,
+    element: <AuthLayout />,
     children: [
       {
-        path: "/profile/search",
-        element: <Search />,
+        path: "/",
+
+        element: <Home />,
+      },
+      {
+        path: "/auth",
+
+        element: <Auth />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+        children: [
+          {
+            path: "/profile/search",
+            element: <Search />,
+          },
+        ],
       },
     ],
   },
