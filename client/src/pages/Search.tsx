@@ -1,5 +1,5 @@
 
 const Search: React.FC = () => {
-    return <div>Test Page</div>;
+    return <div>Search</div>;
 }
 export default Search;

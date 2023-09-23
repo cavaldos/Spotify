@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ReactPlayer from "react-player";
+import { Page } from "~/components/page";
 import { SideBar } from "./components/sidebar";
 const App: React.FC = () => {
   const [albums, setAlbums] = useState<any[]>([]);
@@ -33,8 +33,21 @@ const App: React.FC = () => {
 
   return (
     <>
-      <h1>Spotify</h1>
-      <SideBar />
+      <div className="select-none w-full absolute left-0 right-0 top-0	">
+        <div className=" 	flex h-screen w-[100] flex-row overflow-clip rounded-none bg-transparent text-white dark:border-[#413a43] m-0 p-0">
+          <div className="flex flex-grow flex-row">
+            <div className="w-fit float-left	">
+              <SideBar />
+            </div>
+            <div className="w-full">
+              <Page />
+              asdf
+            </div>
+          </div>
+          <div className="fixed bottom-0 w-full ">{/* <Player /> */}</div>
+          {/* <TailwindIndicator /> */}
+        </div>
+      </div>
     </>
   );
 };

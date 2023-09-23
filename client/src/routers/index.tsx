@@ -1,9 +1,9 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
 import Home from "~/pages/Home";
-import Profile from "~/pages/Profile";
+import Profile from "~/pages/Searc";
 import Search from "~/pages/Search";
-import Auth from "~/pages/auth";
+// import Auth from "~/pages/Auth";
 import AuthProvider from "~/components/context.jsx";
 const AuthLayout = () => {
   return (
@@ -24,7 +24,7 @@ export default createBrowserRouter([
       {
         path: "/auth",
 
-        element: <Auth />,
+        // element: <Auth />,
       },
       {
         path: "/profile",

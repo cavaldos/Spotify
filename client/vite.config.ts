@@ -13,6 +13,16 @@ export default defineConfig({
   optimizeDeps: {
     include: ["react", "react-dom", "**/*.jsx", "**/*.tsx"],
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: "src/index.html",
+      },
+      output: {
+        strict: true,
+      },
+    },
+  },
   resolve: {
     alias: [
       {
