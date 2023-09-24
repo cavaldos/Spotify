@@ -17,25 +17,13 @@ Support deploy versel
 - Clone repository
 
 ```shell
- git clone https://github.com/cavaldos/Reactjs-template.git
-```
-
-- Rename your-project
-
-```shell
- mv Reactjs-template new-project-name
+ git clone https://github.com/cavaldos/Spotify.git
 ```
 
 - Move path
 
 ```shell
-  cd new-project-name
-```
-
-- Remove config git
-
-```shell
- rm -rf .git
+  cd Spotify
 ```
 
 - Install package dependencies
@@ -50,21 +38,8 @@ Support deploy versel
  npm run dev # npm run dev
 ```
 
-## Expanding the ESLint configuration
+## Sreenshot
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+  ![Screenshot from 2022-12-11 19-30-20](https://github.com/cavaldos/Spotify/blob/main/screens/home.png)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
