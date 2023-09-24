@@ -1,8 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Page } from "~/components/page";
-import { SideBar } from "./components/sidebar";
 import { RouterProvider } from "react-router-dom";
 import routers  from "~/routers/index";
 // import { TailwindIndicator } from "./components/tailwind-indicator";

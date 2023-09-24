@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import { SideBar } from "~/components/sidebar";
 import { TailwindIndicator } from "~/components/tailwind-indicator";
-
+import { TopBar } from "~/components/TopBar";
 const DefaultLayout: React.FC = () => {
   return (
     <>
@@ -14,6 +14,7 @@ const DefaultLayout: React.FC = () => {
               <SideBar />
             </div>
             <div className="w-full ">
+              <TopBar />
               <Outlet />
             </div>
           </div>

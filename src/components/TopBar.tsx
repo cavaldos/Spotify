@@ -88,7 +88,7 @@ export function TopBar() {
           data-testid="user-widget-name"
           data-encore-id="type"
         >
-          agmmnn
+          khanh
         </span>
         <svg
           role="img"

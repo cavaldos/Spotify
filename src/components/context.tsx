@@ -8,10 +8,12 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 
-const AuthContext = createContext();
+const AuthContext = createContext<any>({});
+const auth = getAuth();
 
-import { auth } from "~/config/firebase";
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }: any) => {
+const [user, setUser] = useState<any>(null);
+
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)

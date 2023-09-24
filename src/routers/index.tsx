@@ -4,6 +4,7 @@ import Home from "~/pages/Home";
 import ProtectedRoute from "~/routers/ProtectRoute";
 
 import DefaultLayot from "~/components/layout/default";
+import  Search  from "~/pages/Search";
 
 const AuthLayout = () => {
   return (
@@ -36,22 +37,16 @@ export default createBrowserRouter([
             element: <ProtectedRoute />,
             children: [
               {
-                path: "/",
-                element: <Home />,
-                children: [
-                  {
-                    path: "/like-song",
-                    element: <h1>Like song</h1>,
-                  },
-                  {
-                    path: "/create-playlist",
-                    element: <h1>Create playlist</h1>,
-                  },
-                  {
-                    path: "/search",
-                    element: <h1>Search</h1>,
-                  },
-                ],
+                path: "/like-song",
+                element: <h1>Like song</h1>,
+              },
+              {
+                path: "/create-playlist",
+                element: <h1>Create playlist</h1>,
+              },
+              {
+                path: "/search",
+                element: <Search />,
               },
             ],
           },
