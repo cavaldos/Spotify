@@ -2,8 +2,14 @@
 
 Support deploy versel
 
+
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## Sreenshot
+
+![Screenshot from 2022-12-11 19-30-20](https://github.com/cavaldos/Spotify/blob/main/screens/home.png)
 
 ## Frameworks and Libraries
 
@@ -35,6 +41,3 @@ Support deploy versel
  npm run dev # npm run dev
 ```
 
-## Sreenshot
-
-![Screenshot from 2022-12-11 19-30-20](https://github.com/cavaldos/Spotify/blob/main/screens/home.png)
