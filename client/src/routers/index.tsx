@@ -1,10 +1,10 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
 import Home from "~/pages/Home";
-import Profile from "~/pages/Searc";
-import Search from "~/pages/Search";
-// import Auth from "~/pages/Auth";
-import AuthProvider from "~/components/context.jsx";
+import ProtectedRoute from "~/routers/ProtectRoute";
+
+import DefaultLayot from "~/components/layout/default";
+
 const AuthLayout = () => {
   return (
     <>
@@ -14,25 +14,46 @@ const AuthLayout = () => {
 };
 export default createBrowserRouter([
   {
-    element: <AuthLayout />,
+    element: <DefaultLayot />,
     children: [
       {
-        path: "/",
-
         element: <Home />,
+        path: "/",
       },
-      {
-        path: "/auth",
 
-        // element: <Auth />,
-      },
       {
-        path: "/profile",
-        element: <Profile />,
+        element: <AuthLayout />,
         children: [
           {
-            path: "/profile/search",
-            element: <Search />,
+            path: "/login",
+            element: <h1>Login</h1>,
+          },
+          {
+            path: "/",
+            element: <Home />,
+          },
+          {
+            element: <ProtectedRoute />,
+            children: [
+              {
+                path: "/",
+                element: <Home />,
+                children: [
+                  {
+                    path: "/like-song",
+                    element: <h1>Like song</h1>,
+                  },
+                  {
+                    path: "/create-playlist",
+                    element: <h1>Create playlist</h1>,
+                  },
+                  {
+                    path: "/search",
+                    element: <h1>Search</h1>,
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
